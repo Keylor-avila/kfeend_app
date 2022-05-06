@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<form class="form card card-body" action="/nuevo_local" method="POST" style="width: 500px; height: auto">
+    <h1>Ingresar nuevo local</h1>
+    <label class="form card card-body"> (texto de ejemplo) Si desea registrar un restaurante y que este sea publicado en
+        nuestra pagina web, por favor rellenar el siguiente formulario con los datos del mismo.</label>
+    <br />
+    <br />
+    <div class="form card card-body">
+        <label> Ingrese nombre del restaurante a registrar</label>
+        <br />
+        <input type="text" name="name">
+        <br />
+        <label>Inserte una imagen del restaurante a publicar </label>
+        <br />
+        <input type="file" name="image" class="form card card-body">
+        <br />
+        <label> Ingrese una descripcion del restaurante</label>
+        <br />
+        <textarea name="description" rows="10" cols="30"
+            placeholder="Descripcion del restaurante / servicios que"></textarea>
+        <!-- <input type="text" name="description" placeholder="Descripcion del restaurante/servicios que ofrece" style = "height: 80px; width: auto;" -->
+        <br />
+        <label> Ingresar medios del restaurante a registrar</label>
+        <br />
+        <label> Facebook </label>
+        <input type="text" name="link_1" placeholder="(Link_1)">
+        <br />
+        <label> Instagram </label>
+        <input type="text" name="link_2" placeholder="(Link_2)">
+        <br />
+        <label> Pagina Web </label>
+        <input type="text" name="link_3" placeholder="(Link_3)">
+        <br />
+        <label>Ingresar numero telefonico del restaurante a registrar</label>
+        <input type="number" name="phone_number">
+        <br />
+        <button class="btn btn-info">
+            Enviar
+        </button>
+        <br />
+    </div>
+
+</form>
+
+{% endblock %}

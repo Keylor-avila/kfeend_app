@@ -1,0 +1,21 @@
+{% extends 'layout.html' %} {% block body %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/login.css') }}">
+
+
+<section class="form-login">
+    <h5> Formulario Login </h5>
+    <form class="form card card-body" action="/new_register" method="POST">
+        <input class="controls" type="text" name="Usuario" placeholder="Usuario...">
+        <input class="controls" type="password" name="Contraseña" placeholder="Contrasenia...">
+        <input class="buttons" type="submit" name="Ingresar" value="Ingresar">
+        <p> <a href="#"> Olvidaste tu contrasenia? </a></p>
+    </form>
+</section>
+
+
+
+
+
+
+
+{% endblock %}

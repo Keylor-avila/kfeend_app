@@ -1,0 +1,57 @@
+:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Roboto Slab', serif;
+}
+
+.menu {
+    background-color: #a80038;
+    height: 75px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid white;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, .6);
+}
+
+.logo {
+    color: white;
+    font-size: 35px;
+    padding: 0 80px;
+    font-weight: bold;
+}
+
+.menu_items {
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+}
+
+.menu_items li {
+    border-radius: 3px;
+    margin: 0 30px;
+}
+
+.menu_items li a {
+    padding: 7px 13px;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    text-transform: uppercase;
+    color: white;
+}
+
+.menu_items li:hover,
+li.active {
+    background-color: rgba(0, 0, 0, .3);
+    transition: 0.s;
+}

@@ -1,0 +1,66 @@
+{% extends 'layout.html' %} {% block body %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/addLocal.css') }}">
+
+<div class="contenedor">
+
+    <body>
+
+        <section class="form-login">
+            <h5> Agregar Local </h5>
+            <h4> Al registrar un local los usuarios lo podrán encontrar en un apartado de la aplicacion, dependiendo de la categoría que selecciones para el mismo</h4>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <hr />
+            <br />
+
+            <form class="form card card-body" action="/nuevo_local" method="POST" style="width: 500px; height: auto">
+                <h3> Ingresar el nombre del restaurante a registrar </h3>
+                <input class="controls" type="text" name="name" placeholder="Nombre del restaurante...">
+
+                <h3> Inserte Imagen </h3>
+                <input class="controls" type="file" name="image" placeholder="Correo Electronico...">
+
+                <h3 class="serv"> Ingrese una descripcion del restaurante </h3>
+                <textarea name="description" rows="10" cols="30"> </textarea>
+
+                <h3> <b>Ingrese medios del restaurante a registrar </b> </h3>
+
+                <h2> Facebook </h2>
+                <input class="controls" type="text" name="link_1" placeholder="(Link 1)">
+
+                <h2> Instagram </h2>
+                <input class="controls" type="text" name="link_2" placeholder="(Link 2)">
+
+                <h2> Pagina web </h2>
+                <input class="controls" type="text" name="link_3" placeholder="(Link 3)">
+                <h2> Numero telefonico </h2>
+                <input class="controls" type="text" name="phone_number">
+
+                <h2> Tipo de Local </h2>
+                <select class="controls" name="tipo_local">
+
+                    <option value="1">Restaurante</option>
+                    
+                    <option value='2'>Cafeteria</option>
+                    
+                    <option value='3'>Heladeria</option>
+
+                    <option value='4'>Pizzeria</option>
+
+                    <option value='5'>Soda</option>
+
+                    <option value='6'>Bar</option>
+                    
+                    </select>
+
+                <input class="buttons" type="submit" name="Ingresar" value="Ingresar">
+            </form>
+        </section>
+    </body>
+</div>
+
+{% endblock %}

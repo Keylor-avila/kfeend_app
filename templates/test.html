@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+{% block body %}
+{% for local in locals %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/card_perfiles.css') }}">
+
+<a href="/perfil/{{local.0}}" class='btn btn-secondary' style="margin:10px"> <img src="https://los40es00.epimg.net/los40/imagenes/2020/02/04/cinetv/1580834241_572538_1580834379_noticia_normal.jpg
+" style="width: 200px;">
+    <p>{{local.1}}</p>
+</a>
+
+<!--<a href="/perfil/{{local.0}}" class = 'btn btn-secondary' style="margin:10px" >  <img  src="https://los40es00.epimg.net/los40/imagenes/2020/02/04/cinetv/1580834241_572538_1580834379_noticia_normal.jpg
+" style="width: 200px;"> <p>{{local.1}}</p> </a>-->
+
+
+{% endfor %}
+<hr />
+<a href="/añadir_local"> <button class="btn btn-info">Agregar nuevo local </button> </a>
+<a href="/register"> <button class="btn btn-success">Registrarse </button> </a>
+{% endblock %}

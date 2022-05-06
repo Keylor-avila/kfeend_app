@@ -1,0 +1,10 @@
+{% extends 'layout.html' %} {% block body %} {% for local in locals %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/card_perfiles.css') }}">
+
+<div class="card_perfil " style="text-decoration: none;">
+    <a href="/local/{{local.0}}" style="color: #a80038;"><img src="https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2021/09/11/16313139674620.jpg">
+        <h4>{{local.1}}</h4>
+    </a>
+</div>
+
+{% endfor %} {% endblock %}
